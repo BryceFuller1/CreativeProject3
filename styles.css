@@ -41,11 +41,24 @@ textarea {
     height: 100px;
 }
 
+div.fixed {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 300px;
+  font-size: 20px;
+}
+body
+{
+  background: #D2D2D2;
+}
 .d
 {
   display:flex;
 }
 .daStart
 {
+  margin-top: 25px;
   text-align: center;
+  font-family: cursive;
 }

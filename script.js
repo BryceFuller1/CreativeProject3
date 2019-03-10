@@ -13,6 +13,14 @@ let app = new Vue({
     morganLast: '',
     mittLast: '',
     mittFirst: '',
+    dwightFirst: '',
+    dwightSecond: '',
+    hughFirst: '',
+    hughLast: '',
+    chrisFirst: '',
+    chrisLast: '',
+    galFirst: '',
+    galLast: '',
    scorez: 0,
   },
 
@@ -59,6 +67,45 @@ let app = new Vue({
       this.mittLast = '';
     },
 
+    dwight()
+    {
+      if (this.dwightFirst === 'dwight' && this.dwightLast === 'schrute')
+      {
+        this.supaScore();
+      }
+      this.dwightFirst = '';
+      this.dwightLast = '';
+    },
+
+    hugh()
+    {
+      if (this.hughFirst === 'hugh' && this.hughLast === 'jackman')
+      {
+        this.supaScore();
+      }
+      this.hughFirst = '';
+      this.hughLast = '';
+    },
+
+    chris()
+    {
+      if (this.chrisFirst === 'chris' && this.chrisLast === 'pratt')
+      {
+        this.supaScore();
+      }
+      this.chrisFirst = '';
+      this.chrisLast = '';
+    },
+
+    gal()
+    {
+      if (this.galFirst === 'gal' && this.galLast === 'gladot')
+      {
+        this.supaScore();
+      }
+      this.galFirst = '';
+      this.galLast = '';
+    },
 
     supaScore ()
     {
