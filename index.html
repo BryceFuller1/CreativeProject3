@@ -4,26 +4,141 @@
 <head>
   <meta charset="utf-8" />
   <title>Learning Vue</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
   <link rel="stylesheet" href="/styles.css">
 </head>
 
 <body>
 
+<h1 class="daStart"> Pop culture test </h1>
   <div id="root">
-    <p> {{ message }}</p>
-    <p>I said, {{ screaming }}</p>
+    <p> Type in the name of the following celebrities </p>
+    <p> (All lower case) </p>
 
-    <h1>Tasks</h1>
-    <ul>
-      <li v-for="task in tasks" v-text="task.description"></li>
-    </ul>
+    <div class="container">
 
-    <h1>Incomplete Tasks</h1>
-    <ul>
-      <li v-for="task in incompleteTasks">{{task.description}}</li>
-    </ul>
+      <div class="row">
+        <div class="col">
+          <label for="toggle">Check the box to reveal the image</label><input id="toggle" type="checkbox" />
+          <img alt="placeholder" src="https://upload.wikimedia.org/wikipedia/commons/8/82/Bradley_Cooper_2009.jpg" height='300' width="400" />
+        </div>
+        <div class="col-5">
+          <p></p>
+          <p></p>
+          <p></p>
+          <p></p>
+
+          <form v-on:submit.prevent="bradley">
+            First name:<br>
+            <input v-model="bradleyFirst" ></p>
+            Last name:<br>
+            <input v-model="bradleyLast" ></p>
+            <button type="submit">Submit</button>
+        </form>
+        </div>
+        <div class="col-2">
+
+        </div>
+      </div>
+
+      <p></p>
+      <p></p>
+      <p></p>
+      <p></p>
+
+      <div class="row">
+        <div class="col">
+          <label for="toggle">Toggle the visibility of the image</label><input id="toggle" type="checkbox" />
+          <img alt="placeholder" src="https://upload.wikimedia.org/wikipedia/commons/8/8f/Taylor_Swift_GMA_2012.jpg" height='300' width="400" />
+        </div>
+        <div class="col-5">
+          <p></p>
+          <p></p>
+          <form v-on:submit.prevent="taylor">
+            First name:<br>
+            <input v-model="taylorFirst" ></p>
+            Last name:<br>
+            <input v-model="taylorLast" ></p>
+            <button type="submit">Submit</button>
+        </form>
+        </div>
+        <div class="col-2">
+
+        </div>
+      </div>
+
+      <p></p>
+      <p></p>
+      <p></p>
+      <p></p>
+
+      <div class="row">
+        <div class="col">
+          <label for="toggle">Toggle the visibility of the image</label><input id="toggle" type="checkbox" />
+          <img alt="placeholder" src="https://c1.staticflickr.com/6/5030/5778162379_e0d4bfdac9_b.jpg" height='300' width="400" />
+        </div>
+        <div class="col-5">
+          <p></p>
+          <p></p>
+          <form v-on:submit.prevent="morgan">
+            First name:<br>
+            <input v-model="morganFirst" ></p>
+            Last name:<br>
+            <input v-model="morganLast" ></p>
+            <button type="submit">Submit</button>
+        </form>
+        </div>
+        <div class="col-2">
+
+        </div>
+      </div>
+
+
+      <p></p>
+      <p></p>
+      <p></p>
+      <p></p>
+
+      <div class="row">
+        <div class="col">
+          <label for="toggle">Toggle the visibility of the image</label><input id="toggle" type="checkbox" />
+          <img alt="placeholder" src="https://upload.wikimedia.org/wikipedia/commons/0/0a/Mitt_Romney_at_2012_CPAC.jpg" height='300' width="400" />
+        </div>
+        <div class="col-5">
+          <p></p>
+          <p></p>
+          <form v-on:submit.prevent="mitt">
+            First name:<br>
+            <input v-model="mittFirst" ></p>
+            Last name:<br>
+            <input v-model="mittLast" ></p>
+            <button type="submit">Submit</button>
+        </form>
+        </div>
+        <div class="col-2">
+
+        </div>
+      </div>
+
+
+
+    </div> <!-- last div -->
+
+
+    <p>Your score: {{scorez}}</p>
   </div>
+
+
+
+
+  <div class="footer">
+    <a href="https://github.com/BryceFuller1/CreativeProject3">My github</a>
+  </div>
+
   <script src="https://cdn.jsdelivr.net/npm/vue@2.6.2/dist/vue.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script text="type/javascript" src="/script.js"></script>
 </body>
 

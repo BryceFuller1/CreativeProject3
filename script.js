@@ -4,39 +4,67 @@ let app = new Vue({
   el: "#root",
   // provide data for bindings
   data: {
-    message: 'I really like bread',
-    tasks: [{ 
-        description: "Create some loaves of bread",
-        completed: true
-      },
-      {
-        description: "Create some fish",
-        completed: true
-      },
-      {
-        description: "Create more loaves of bread",
-        completed: false,
-      },
-      {
-        description: "Create more fish",
-        completed: false
-      },
-      {
-        description: "Create more loaves of bread",
-        completed: false
-      },
-      {
-        description: "Tell Peter to clean up the mess",
-        completed: false
-      }
-    ]
+    datName: 'rich bobby q',
+    bradleyFirst: '',
+    bradleyLast: '',
+    taylorFirt: '',
+    taylorSecond: '',
+    morganFirst: '',
+    morganLast: '',
+    mittLast: '',
+    mittFirst: '',
+   scorez: 0,
   },
-  computed: {
-    screaming() {
-      return this.message.toUpperCase();
+
+
+  methods: {
+
+    bradley()
+    {
+      if (this.bradleyFirst === 'bradley' && this.bradleyLast === 'cooper')
+      {
+        this.supaScore();
+      }
+      this.bradleyFirst = '';
+      this.bradleyLast = '';
     },
-    incompleteTasks() {
-      return this.tasks.filter(task => !task.completed);
+
+    taylor()
+    {
+      if (this.taylorFirst === 'taylor' && this.taylorLast === 'swift')
+      {
+        this.supaScore();
+      }
+      this.taylorFirst = '';
+      this.taylorLast = '';
+    },
+
+    morgan()
+    {
+      if (this.morganFirst === 'morgan' && this.morganLast === 'freeman')
+      {
+        this.supaScore();
+      }
+      this.morganFirst = '';
+      this.morganLast = '';
+    },
+
+    mitt()
+    {
+      if (this.mittFirst === 'mitt' && this.mittLast === 'romney')
+      {
+        this.supaScore();
+      }
+      this.mittFirst = '';
+      this.mittLast = '';
+    },
+
+
+    supaScore ()
+    {
+      this.scorez = this.scorez + 1;
     }
-  }
+
+    },
+
 });
